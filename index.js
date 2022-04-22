@@ -19,31 +19,11 @@ const server = app.listen(HTTP_PORT, () => {
     console.log('App listening on port %PORT%'.replace('%PORT%', HTTP_PORT))
 })
 
-// Start of home page endpoints ----------------------
-
-// Html for home page
-app.get('', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/home/home.html'));
-});
-
-// Css for home page
-app.get('home.css', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/home/home.css'));
-});
-
-// JS for home page
-app.get('home.js', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/home/home.js'));
-});
-
-// End of home page endpoints -------------------------------
-
 // Endpoint for html to string method
 app.get('/html/', (req, res) => {
 	var raw = fs.readFileSync(path.resolve(__dirname, './public/next/next.html'), 'utf8')
 	res.send(raw)
 });
-
 
 // Start of next page endpoints ------------------------------
 
