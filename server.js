@@ -29,7 +29,7 @@ app.get('/html/', (req, res) => {
 
 // Returns html for next page
 app.get('/next/', (req,res) => {
-    res.sendFile(path.join(__dirname, 'public/next/'));
+    res.sendFile(path.join(__dirname, 'public/next/index.html'));
 })
 
 // Returns css for next page
