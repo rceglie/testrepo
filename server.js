@@ -29,17 +29,17 @@ app.get('/html/', (req, res) => {
 
 // Returns html for next page
 app.get('/next/', (req,res) => {
-    res.sendFile(path.join(__dirname, 'public/next/next.html'));
+    res.sendFile(path.join(__dirname, 'public/next/'));
 })
 
 // Returns css for next page
-app.get('/next/next.css', (req,res) => {
-    res.sendFile(path.join(__dirname, 'public/next/next.css'));
+app.get('/next/style.css', (req,res) => {
+    res.sendFile(path.join(__dirname, 'public/next/style.css'));
 })
 
 // Returns js for next page
-app.get('/next/next.js', (req,res) => {
-    res.sendFile(path.join(__dirname, 'public/next/next.js'));
+app.get('/next/script.js', (req,res) => {
+    res.sendFile(path.join(__dirname, 'public/next/script.js'));
 })
 
 // End of next page endpoints --------------------------
